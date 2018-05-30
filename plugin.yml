@@ -1,0 +1,45 @@
+main: org.hopto.electronrush.minecraft.plugins.resourceVerse.ResourceVerse
+version: 0.3.0
+name: ResourceVerse
+discription: A simple plugin for managing resource worlds.
+author: Jinyu Liu
+depend: [Multiverse-Core, Multiverse-Portals]
+commands: 
+  rvrefresh: 
+    description: Starts a refresh cycle.
+    useage: rvrefresh
+    permission: ResourceVerse.command.refresh
+  
+  rvexit:
+    description: returns the player to the main world.
+    useage: rvexit
+    permission: ResourceVerse.command.exit
+    
+  rvnext:
+    description: prints out when the next scheduled refresh will be.
+    useage: rvnext
+    permission: ResourceVerse.command.next
+ 
+permissions: 
+   ResourceVerse.command:
+     description: Gives access to all ResourceVerse commands.
+     children:
+       ResourceVerse.command.refresh: true
+       ResourceVerse.command.exit: true
+       ResourceVerse.command.next: true
+   
+   ResourceVerse.command.refresh:
+     description: Allows the use of the refresh command to reset resource worlds.
+     default: Op
+     
+   ResourceVerse.command.exit:
+     description: Allows the use of the exit command to exit the resource world.
+     default: true
+     
+   ResourceVerse.command.next: 
+     description: Allows the use of the next command to check when the next uprefresh is scheduled.
+     default: true
+     
+   ResourceVerse.allowed:
+     descripton: Gives acess to the resource world.
+     default: true

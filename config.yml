@@ -1,0 +1,32 @@
+# Config file for ResourceVerse
+
+# Name of resource world A, needs to exist
+resouceWorldAName: resourceA
+
+# Name of resource world B, needs to exist
+resouceWorldBName: resourceB
+
+# Prefix of portals to the resource world
+# the plugin will intercept any attempts to teleport from these portals and send the player
+# to the resoure world instead.(not case sensitive)
+portalPrefix: resourceportal
+
+# At what hour of the day to perform the refresh (0-23)
+refreshTime: 2
+
+# How often should refresh occur days
+refreshPeriod: 1
+
+# WorldRefreshMessage
+# sent to all players after an resource world refresh
+worldRefreshMessage: "Resource World has been refreshed!"
+
+# WorldDeactivationMessage
+# sent to all players within a resource world that became inactive
+worldDeactivationMessage: "This Resource World is no longer Active. Once you leave this world you will not be able to return."
+
+# DateFormat
+# how should dates in this plugin be displayed
+dateFormat: "MM/dd/yyyy HH:mm:ss"
+# dateFormat: "dd/MM/yyyy HH:mm:dd"
+# dateFormat: "yyyy/MM/dd HH:mm:dd"
